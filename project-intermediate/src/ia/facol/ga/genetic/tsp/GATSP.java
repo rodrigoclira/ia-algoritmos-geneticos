@@ -111,7 +111,7 @@ public class GATSP {
 	}
 	
 	/*
-	 * 
+	 * TODO
 	 * Implementar um método que imprima toda a população
 	 */
 	public String toString(){

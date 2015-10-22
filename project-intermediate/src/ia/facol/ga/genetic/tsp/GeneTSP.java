@@ -76,32 +76,24 @@ public class GeneTSP implements Comparable<GeneTSP> {
 	}
 	
 	public void mutation(){
-		
-		if (random.nextDouble() <= configuration.getMutationRate()){
-			int position = choosePosition();
-			configuration.getMutation().mutate(this, position);
-			setModified(true);
-	
-		}
-			
+		/*
+		 * TODO
+		 * Aplicar a mutação de acordo com a taxa definida
+		 */			
 	}	
 	
 	public List<GeneTSP> crossover(GeneTSP gene){
-		List <GeneTSP> children = new LinkedList<GeneTSP>();
-		
-		if (random.nextDouble() <= configuration.getCrossoverRate()){
-			//this.setModified(true);
-			children = this.configuration.getCrossoverType().crossover(this, gene);
-			
-		}
-		
+		List <GeneTSP> children = new LinkedList<GeneTSP>();		
+		/*
+		 * TODO
+		 * Aplicar a crossover de acordo com a taxa definida
+		 */		
 		return children;
 	}
 	
 	
 	/*
 	 * TODO Implementar um método para impressão das informações do gene
-	 * 
 	 */
 	public String toString(){
 		return "";
@@ -109,7 +101,6 @@ public class GeneTSP implements Comparable<GeneTSP> {
 
 	/*
 	 * TODO Implementar uma forma de comparação do Gene.
-	 * 
 	 */	
 	@Override
 	public int compareTo(GeneTSP o) {
