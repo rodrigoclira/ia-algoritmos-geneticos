@@ -14,9 +14,10 @@ public class Esphere extends Problemable{
 	 */
 	public Double evaluate(List<Double> gene){
 		double sum = 0.0;
-		for (Double value : gene){
-			sum += value * value;
-		}
+		
+		/*
+		 * TODO Implementar função espera
+		 */
 		
 		return sum; 
 	}

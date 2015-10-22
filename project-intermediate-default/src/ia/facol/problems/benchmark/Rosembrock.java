@@ -19,13 +19,9 @@ public class Rosembrock extends Problemable{
 		int count = 0;
 		double xi1, xi;
 		
-		while (count < gene.size() -1){
-			xi1 = gene.get(count+1);
-			xi = gene.get(count);
-			
-			sum += 100 *  Math.pow(Math.pow(xi, 2) - xi1, 2) + Math.pow(xi - 1, 2);  
-			count += 1;
-		}
+		/* TODO
+		 * Implementar Rosebrock
+		 */
 		
 		return sum;
 	}
