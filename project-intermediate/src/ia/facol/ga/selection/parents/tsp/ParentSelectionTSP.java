@@ -1,6 +1,6 @@
 package ia.facol.ga.selection.parents.tsp;
 
-import ia.facol.ga.genetic.tsp.GeneTSP;
+import ia.facol.ga.genetic.tsp.ChromosomeTSP;
 
 import java.util.List;
 import java.util.Random;
@@ -8,8 +8,8 @@ import java.util.Random;
 public abstract class ParentSelectionTSP {
 	private Random random = new Random();
 	
-	public abstract GeneTSP select(List<GeneTSP> genes, GeneTSP mother);
-	public abstract GeneTSP select(List<GeneTSP> genes);
+	public abstract ChromosomeTSP select(List<ChromosomeTSP> genes, ChromosomeTSP mother);
+	public abstract ChromosomeTSP select(List<ChromosomeTSP> genes);
 
 	public Random getRandom() {
 		return random;

@@ -1,6 +1,6 @@
 package ia.facol.ga.crossover;
 
-import ia.facol.ga.genetic.Gene;
+import ia.facol.ga.genetic.Chromosome;
 
 import java.util.LinkedList;
 import java.util.Random;
@@ -13,7 +13,7 @@ public abstract class Crossover {
 		setRandom(new Random());
 	}
 	
-	public abstract LinkedList<Gene> crossover(Gene geneA, Gene geneB);
+	public abstract LinkedList<Chromosome> crossover(Chromosome geneA, Chromosome geneB);
 
 	public Random getRandom() {
 		return random;

@@ -1,6 +1,6 @@
 package ia.facol.ga.selection.parents.impl;
 
-import ia.facol.ga.genetic.Gene;
+import ia.facol.ga.genetic.Chromosome;
 import ia.facol.ga.selection.parents.ParentSelection;
 
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 public class TournmentParentSelection extends ParentSelection{
 
 	@Override
-	public Gene select(List<Gene> genes, Gene mother) {		
+	public Chromosome select(List<Chromosome> genes, Chromosome mother) {		
 
 		/* TODO
 		 * Selecionar um Gene utilizando a seleção por torneio 
@@ -19,7 +19,7 @@ public class TournmentParentSelection extends ParentSelection{
 	}
 
 	@Override
-	public Gene select(List<Gene> genes) {
+	public Chromosome select(List<Chromosome> genes) {
 		return select(genes, null);
 	}
 

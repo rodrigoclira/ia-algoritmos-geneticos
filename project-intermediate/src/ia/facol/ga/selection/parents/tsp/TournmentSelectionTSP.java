@@ -1,6 +1,6 @@
 package ia.facol.ga.selection.parents.tsp;
 
-import ia.facol.ga.genetic.tsp.GeneTSP;
+import ia.facol.ga.genetic.tsp.ChromosomeTSP;
 import ia.facol.ga.selection.parents.tsp.ParentSelectionTSP;
 import java.util.List;
 import java.util.Random;
@@ -9,7 +9,7 @@ public class TournmentSelectionTSP  extends ParentSelectionTSP{
 
 	private Random random = new Random();
 	
-	public GeneTSP select(List<GeneTSP> genes, GeneTSP mother) {
+	public ChromosomeTSP select(List<ChromosomeTSP> genes, ChromosomeTSP mother) {
 				
 		
 		/* TODO
@@ -21,7 +21,7 @@ public class TournmentSelectionTSP  extends ParentSelectionTSP{
 	}
 
 	@Override
-	public GeneTSP select(List<GeneTSP> genes) {
+	public ChromosomeTSP select(List<ChromosomeTSP> genes) {
 		// TODO Auto-generated method stub
 		return select(genes, null);
 	}

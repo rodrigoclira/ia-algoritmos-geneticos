@@ -3,16 +3,16 @@ package ia.facol.ga.crossover.tsp;
 import java.util.LinkedList;
 
 import ia.facol.ga.genetic.tsp.GATSP;
-import ia.facol.ga.genetic.tsp.GeneTSP;
+import ia.facol.ga.genetic.tsp.ChromosomeTSP;
 
 public class CrossOverTwoPointsTSP{
 
-	public LinkedList<GeneTSP> crossover(GeneTSP geneA, GeneTSP geneB) {
+	public LinkedList<ChromosomeTSP> crossover(ChromosomeTSP geneA, ChromosomeTSP geneB) {
 		int crossoverPoint1 = geneA.choosePosition();
 		int crossoverPoint2 = 0;
 		
-		GeneTSP child1 = new GeneTSP(GATSP.COUNTER, geneA.getConfiguration());
-		GeneTSP child2 = new GeneTSP(GATSP.COUNTER + 1, geneA.getConfiguration());
+		ChromosomeTSP child1 = new ChromosomeTSP(GATSP.COUNTER, geneA.getConfiguration());
+		ChromosomeTSP child2 = new ChromosomeTSP(GATSP.COUNTER + 1, geneA.getConfiguration());
 		child1.generateNullIndividual();
 		child2.generateNullIndividual();
 		GATSP.COUNTER += 2;
@@ -41,7 +41,7 @@ public class CrossOverTwoPointsTSP{
 		child1.setModified(true);
 		child2.setModified(true);
 		
-		LinkedList<GeneTSP> children = new LinkedList<GeneTSP>();
+		LinkedList<ChromosomeTSP> children = new LinkedList<ChromosomeTSP>();
 		
 		children.add(child1);
 		children.add(child2);
@@ -60,7 +60,7 @@ public class CrossOverTwoPointsTSP{
 	}
 	
 	
-	private void fillChild(GeneTSP child, GeneTSP parent){
+	private void fillChild(ChromosomeTSP child, ChromosomeTSP parent){
 
 		for (int i = 0; i < parent.getGeneticInformation().size(); i++) {
             // Se o filho não possui a cidade, adiciona ela

@@ -1,6 +1,6 @@
 package ia.facol.ga.util;
 
-import ia.facol.ga.genetic.tsp.GeneTSP;
+import ia.facol.ga.genetic.tsp.ChromosomeTSP;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,9 +12,9 @@ public class Util {
 	
 
 	
-	public static List<GeneTSP> rouleteWheelTSP(List<GeneTSP> genes, int numberIndividuos){
-		List<GeneTSP> individuos = new LinkedList<GeneTSP>();
-		GeneTSP gene = null;
+	public static List<ChromosomeTSP> rouleteWheelTSP(List<ChromosomeTSP> genes, int numberIndividuos){
+		List<ChromosomeTSP> individuos = new LinkedList<ChromosomeTSP>();
+		ChromosomeTSP gene = null;
 		while (individuos.size() < numberIndividuos){
 			gene = roulete(genes);
 			individuos.add(gene);
@@ -23,11 +23,11 @@ public class Util {
 	}
 	
 	
-	private static GeneTSP roulete(List<GeneTSP> genes){
+	private static ChromosomeTSP roulete(List<ChromosomeTSP> genes){
 		int count = 0;
 		double sumFitness = 0.0;
 		
-		for (GeneTSP g : genes){
+		for (ChromosomeTSP g : genes){
 			sumFitness += g.getFitness();
 		}
 		
@@ -42,7 +42,7 @@ public class Util {
 			}
 		}
 		
-		GeneTSP geneChosen = genes.get(count - 1);
+		ChromosomeTSP geneChosen = genes.get(count - 1);
 		genes.remove(count - 1);
 		return geneChosen;
 	}

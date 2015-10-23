@@ -17,7 +17,7 @@ public class GA {
 	public static int COUNTER = 0;
 	public static boolean DEBUG = false;
 	private Configuration configuration;
-	private List<Gene> individuos;
+	private List<Chromosome> individuos;
 	private Random random;
 	
 	public GA(Configuration c){
@@ -25,7 +25,7 @@ public class GA {
 		int count = 0;
 		this.random = new Random();
 		double value = 0.0;
-		individuos = new LinkedList<Gene>();
+		individuos = new LinkedList<Chromosome>();
 		
 		/**
 		 * TODO
@@ -63,8 +63,8 @@ public class GA {
 
 	private void crossover(){
 		int count = 0;
-		List<Gene> children = new LinkedList<Gene>();
-		List<Gene> tempChild = null;
+		List<Chromosome> children = new LinkedList<Chromosome>();
+		List<Chromosome> tempChild = null;
 		while (count < configuration.getCrossoverQuantity()){
 			/* TODO
 			 * 1. Escolher um pai
@@ -82,7 +82,7 @@ public class GA {
 	}
 	
 	private void mutation(){
-		for (Gene g : individuos){
+		for (Chromosome g : individuos){
 			g.mutation();
 		}
 	}
@@ -96,7 +96,7 @@ public class GA {
 		this.configuration = configuration;
 	}
 
-	public List<Gene> getIndividuos() {
+	public List<Chromosome> getIndividuos() {
 		return individuos;
 	}
 

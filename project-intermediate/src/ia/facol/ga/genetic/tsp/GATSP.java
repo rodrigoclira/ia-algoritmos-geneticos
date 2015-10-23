@@ -17,14 +17,14 @@ public class GATSP {
 	public static int COUNTER = 0;
 	public static boolean DEBUG = false;
 	private ConfigurationTSP configuration;
-	private List<GeneTSP> individuos;
+	private List<ChromosomeTSP> individuos;
 	private Random random;
 	
 	public GATSP(ConfigurationTSP c){
 		this.configuration = c;
 		int count = 0;
 		this.random = new Random();
-		individuos = new LinkedList<GeneTSP>();
+		individuos = new LinkedList<ChromosomeTSP>();
 		
 		while (count < configuration.getIndividiuosQuantity()){
 			/**
@@ -66,8 +66,8 @@ public class GATSP {
 
 	private void crossover(){
 		int count = 0;
-		List<GeneTSP> children = new LinkedList<GeneTSP>();
-		List<GeneTSP> tempChild = null;
+		List<ChromosomeTSP> children = new LinkedList<ChromosomeTSP>();
+		List<ChromosomeTSP> tempChild = null;
 		while (count < configuration.getCrossoverQuantity()){
 			/* TODO
 			 * 1. Escolher um pai
@@ -84,7 +84,7 @@ public class GATSP {
 	}
 	
 	private void mutation(){
-		for (GeneTSP g : individuos){
+		for (ChromosomeTSP g : individuos){
 			g.mutation();
 		}
 	}
@@ -98,7 +98,7 @@ public class GATSP {
 		this.configuration = configuration;
 	}
 
-	public List<GeneTSP> getIndividuos() {
+	public List<ChromosomeTSP> getIndividuos() {
 		return individuos;
 	}
 

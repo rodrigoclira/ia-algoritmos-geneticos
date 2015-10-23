@@ -2,14 +2,14 @@ package ia.facol.ga.crossover.impl;
 
 import ia.facol.ga.crossover.Crossover;
 import ia.facol.ga.genetic.GA;
-import ia.facol.ga.genetic.Gene;
+import ia.facol.ga.genetic.Chromosome;
 
 import java.util.LinkedList;
 
 public class CrossoverOnePoint extends Crossover{
 	
 	@Override
-	public LinkedList<Gene> crossover(Gene geneA, Gene geneB) {
+	public LinkedList<Chromosome> crossover(Chromosome geneA, Chromosome geneB) {
 		int crossoverPoint = geneA.choosePosition();
 		int count = 0;
 		
@@ -21,9 +21,9 @@ public class CrossoverOnePoint extends Crossover{
 		 * Implementar o Crossover de um ponto
 		 */
 				
-		LinkedList<Gene> children = new LinkedList<Gene>();
-		Gene child1 = new Gene(GA.COUNTER, geneA.getConfiguration(), geneticInfoChild1);
-		Gene child2 = new Gene(GA.COUNTER + 1, geneA.getConfiguration(), geneticInfoChild2); 
+		LinkedList<Chromosome> children = new LinkedList<Chromosome>();
+		Chromosome child1 = new Chromosome(GA.COUNTER, geneA.getConfiguration(), geneticInfoChild1);
+		Chromosome child2 = new Chromosome(GA.COUNTER + 1, geneA.getConfiguration(), geneticInfoChild2); 
 		GA.COUNTER += 2;
 		children.add(child1);
 		children.add(child2);

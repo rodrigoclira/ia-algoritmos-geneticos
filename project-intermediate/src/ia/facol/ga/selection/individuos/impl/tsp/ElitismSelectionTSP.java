@@ -1,7 +1,7 @@
 package ia.facol.ga.selection.individuos.impl.tsp;
 
 import ia.facol.ga.configuration.tsp.ConfigurationTSP;
-import ia.facol.ga.genetic.tsp.GeneTSP;
+import ia.facol.ga.genetic.tsp.ChromosomeTSP;
 import ia.facol.ga.util.Util;
 
 import java.util.Iterator;
@@ -12,11 +12,11 @@ public class ElitismSelectionTSP extends IndividuosSelectionTSP {
 	private double percentage = 0.1;
 	
 	@Override
-	public List<GeneTSP> select(List<GeneTSP> genes, ConfigurationTSP configuration) {
+	public List<ChromosomeTSP> select(List<ChromosomeTSP> genes, ConfigurationTSP configuration) {
 		
 		int quantity = (int) Math.ceil(percentage * genes.size());
 		
-		List<GeneTSP> newPopulation = new LinkedList<GeneTSP>();
+		List<ChromosomeTSP> newPopulation = new LinkedList<ChromosomeTSP>();
 
 		/* TODO
 		 * Retorna a nova população após a seleção elitista.

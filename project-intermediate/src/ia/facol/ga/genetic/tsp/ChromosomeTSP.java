@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-public class GeneTSP implements Comparable<GeneTSP> {
+public class ChromosomeTSP implements Comparable<ChromosomeTSP> {
 	/*
 	 * http://www.theprojectspot.com/tutorial-post/applying-a-genetic-algorithm-to-the-travelling-salesman-problem/5
 	 */
@@ -23,11 +23,11 @@ public class GeneTSP implements Comparable<GeneTSP> {
 	private int distance = 0;
 	
 	
-	public GeneTSP(int identifier, ConfigurationTSP configuration){
+	public ChromosomeTSP(int identifier, ConfigurationTSP configuration){
 		this(identifier, configuration, new LinkedList<City>());
 	}
 	
-	public GeneTSP(int identifier, ConfigurationTSP configuration, List<City> geneticInformation){
+	public ChromosomeTSP(int identifier, ConfigurationTSP configuration, List<City> geneticInformation){
 		random = new Random();
 		this.id = identifier;
 		this.configuration = configuration;
@@ -82,8 +82,8 @@ public class GeneTSP implements Comparable<GeneTSP> {
 		 */			
 	}	
 	
-	public List<GeneTSP> crossover(GeneTSP gene){
-		List <GeneTSP> children = new LinkedList<GeneTSP>();		
+	public List<ChromosomeTSP> crossover(ChromosomeTSP gene){
+		List <ChromosomeTSP> children = new LinkedList<ChromosomeTSP>();		
 		/*
 		 * TODO
 		 * Aplicar a crossover de acordo com a taxa definida
@@ -103,7 +103,7 @@ public class GeneTSP implements Comparable<GeneTSP> {
 	 * TODO Implementar uma forma de comparação do Gene.
 	 */	
 	@Override
-	public int compareTo(GeneTSP o) {
+	public int compareTo(ChromosomeTSP o) {
 		return 0;
 	}
 

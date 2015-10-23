@@ -2,7 +2,7 @@ package ia.facol.ga.mutation;
 
 import java.util.Random;
 
-import ia.facol.ga.genetic.Gene;
+import ia.facol.ga.genetic.Chromosome;
 
 public abstract class Mutation {
 	
@@ -12,7 +12,7 @@ public abstract class Mutation {
 		this.setRandom(new Random());
 	}
 	
-	public abstract void mutate(Gene gene, int position);
+	public abstract void mutate(Chromosome gene, int position);
 
 	public Random getRandom() {
 		return random;

@@ -1,6 +1,6 @@
 package ia.facol.ga.selection.parents.tsp;
 
-import ia.facol.ga.genetic.tsp.GeneTSP;
+import ia.facol.ga.genetic.tsp.ChromosomeTSP;
 import ia.facol.ga.selection.parents.tsp.ParentSelectionTSP;
 
 import java.util.List;
@@ -10,9 +10,9 @@ public class RandomSelectionTSP extends ParentSelectionTSP{
 
 	private Random random = new Random();
 	
-	public GeneTSP select(List<GeneTSP> genes, GeneTSP mother) {
+	public ChromosomeTSP select(List<ChromosomeTSP> genes, ChromosomeTSP mother) {
 
-			GeneTSP geneChosen = null;
+			ChromosomeTSP geneChosen = null;
 			/* TODO
 			 *  Selecionar um pai aleatoriamente.
 			 *  Atentar para não selecionar um pai que já foi escolhido como mãe.
@@ -21,7 +21,7 @@ public class RandomSelectionTSP extends ParentSelectionTSP{
 
 	}
 
-	public GeneTSP select(List<GeneTSP> genes) {
+	public ChromosomeTSP select(List<ChromosomeTSP> genes) {
 		return this.select(genes, null);
 	}
 

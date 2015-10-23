@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-public class Gene implements Comparable<Gene>{
+public class Chromosome implements Comparable<Chromosome>{
 	private boolean modified;
 	private List<Double> geneticInformation;
 	private Random random;
@@ -16,7 +16,7 @@ public class Gene implements Comparable<Gene>{
 	private Configuration configuration;
 	private int id;
 	
-	public Gene(int identifier, Configuration configuration, List<Double> geneticInformation){
+	public Chromosome(int identifier, Configuration configuration, List<Double> geneticInformation){
 		random = new Random();
 		this.id = identifier;
 		this.configuration = configuration;
@@ -88,8 +88,8 @@ public class Gene implements Comparable<Gene>{
 			
 	}
 	
-	public List<Gene> crossover(Gene gene){
-		List <Gene> children = new LinkedList<Gene>();
+	public List<Chromosome> crossover(Chromosome gene){
+		List <Chromosome> children = new LinkedList<Chromosome>();
 		
 		/*
 		 * TODO
@@ -110,7 +110,7 @@ public class Gene implements Comparable<Gene>{
 	 * TODO Implementar uma forma de comparação do Gene.
 	 */	
 	@Override
-	public int compareTo(Gene o) {
+	public int compareTo(Chromosome o) {
 		return 0;
 	}
 
