@@ -11,12 +11,6 @@ import ia.facol.problems.tsp.TourManager;
 
 
 
-/** 
- * 
- * @author rcls
- * www.theprojectspot.com/tutorial-post/applying-a-genetic-algorithm-to-the-travelling-salesman-problem/
- */
-
 public class MainTSP {
 	public static void main(String[] args) {
 		
