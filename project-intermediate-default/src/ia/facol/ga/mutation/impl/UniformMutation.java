@@ -8,7 +8,7 @@ public class UniformMutation extends Mutation {
 
 	public void mutate(Chromosome gene, int position){
 		Problemable problem = gene.getConfiguration().getProblem();
-		Double newValue = 0;
+		Double newValue = 0.0;
 		
 		/*
 		 * Gerar um número uniformemente distribuido baseado nos limites do problema.

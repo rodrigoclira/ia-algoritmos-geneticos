@@ -1,7 +1,6 @@
 package ia.facol.ga.genetic;
 
 import ia.facol.ga.configuration.Configuration;
-import ia.facol.ga.genetic.tsp.GeneTSP;
 import ia.facol.ga.util.Util;
 
 import java.util.LinkedList;

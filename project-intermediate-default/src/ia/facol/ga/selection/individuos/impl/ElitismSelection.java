@@ -2,7 +2,6 @@ package ia.facol.ga.selection.individuos.impl;
 
 import ia.facol.ga.configuration.Configuration;
 import ia.facol.ga.genetic.Chromosome;
-import ia.facol.ga.genetic.tsp.GeneTSP;
 import ia.facol.ga.selection.individuos.IndividuosSelection;
 import ia.facol.ga.util.Util;
 
@@ -20,7 +19,7 @@ public class ElitismSelection extends IndividuosSelection{
 		List<Chromosome> newPopulation = new LinkedList<Chromosome>();
 
 		/* TODO
-		 * Retorna a nova população após a seleção elitista.
+		 * Retornar a nova população após a seleção elitista.
 		 * 1. Obter os "quantity" melhores genes.
 		 * 2. Escolher o resto de acordo com a roleta. 
 		 */
